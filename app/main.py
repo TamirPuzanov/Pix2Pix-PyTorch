@@ -54,12 +54,15 @@ class Main(QWidget):
         self.predict_random_image(c)
     
     def predict_random_image(self, c):
+        self.random_btn.setEnabled(False)
         img_name = random.choice(os.listdir("data_samples/" + c + "/"))
+        print(img_name)
         img = Image.open("data_samples/" + c + "/" + img_name).convert("RGB").resize((128, 128))
         self.input_image.setPixmap(QPixmap(QImage(ImageQt(img.convert("RGBA")))))
 
         out_img = self.predict(img)
         self.output_image.setPixmap(QPixmap(QImage(ImageQt(out_img.convert("RGBA")))))
+        self.random_btn.setEnabled(True)
     
     def predict_upload_image(self, c):
         img_path = QFileDialog.getOpenFileName(self, 'Open file', '/home')[0]

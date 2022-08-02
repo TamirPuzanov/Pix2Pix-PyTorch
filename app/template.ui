@@ -2,16 +2,25 @@
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>563</width>
-    <height>275</height>
+    <height>288</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Pix2Pix Interactive Demo</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background: rgb(255, 255, 255);</string>
@@ -20,7 +29,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>40</y>
+     <y>50</y>
      <width>521</width>
      <height>221</height>
     </rect>
@@ -216,7 +225,7 @@ padding: 5px;</string>
     <rect>
      <x>20</x>
      <y>10</y>
-     <width>81</width>
+     <width>251</width>
      <height>21</height>
     </rect>
    </property>
@@ -229,7 +238,7 @@ padding: 5px;</string>
     </font>
    </property>
    <property name="text">
-    <string>Pix2Pix</string>
+    <string>Pix2Pix Interactive Demo</string>
    </property>
   </widget>
   <widget class="QComboBox" name="select_model">

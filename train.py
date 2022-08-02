@@ -144,5 +144,6 @@ for epoch in range(options.epoch):
 
 
 # Save generator
-torch.jit.save(model_g, "model_g.pt")
+traced_m = torch.jit.trace(model_g.cpu(), (torch.rand(1, 3, 128, 128)))
+torch.jit.save(traced_m, "model_g.pt")
 print("Model saved!")
